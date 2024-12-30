@@ -37,6 +37,14 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 app.use(fileUpload());
 app.use(express.urlencoded({ extended: false }));
 
+app.use((req, res, next) => {
+  console.log('Headers:', req.headers);
+  console.log('req.ip:', req.ip);
+  console.log('req.ips:', req.ips); // Array of IPs when `trust proxy` is enabled
+  next();
+});
+
+
 
 // Set up routes
 app.use("/", indexRouter);
