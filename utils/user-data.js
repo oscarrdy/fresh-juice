@@ -14,25 +14,24 @@ const {
 
 
 
-// Function to get the user IP address when Heroku is used due to them using proxies
-function get_client_ip(req) {
-  return req.headers['x-forwarded-for']?.split(",")?.[0]?.trim();
-}
-
-
-
 // Function to get the user geo-data
 async function get_geodata(req) {
   try {
 
     // Get the IP address of the client
-    const IP = get_client_ip(req) || request_ip.getClientIp(req); 
-    if (process.env.ENVIRONMENT === "production" && IP == null) {
-      await logError(`Couldn't get clients IP address.`);
-      return { 
-        ip: null,
-        country: null,
-        currency: default_currency,
+    let IP;
+    if (process.env.ENVIRONMENT === "development") {
+      IP = request_ip.getClientIp(req);
+    }
+    else {
+      IP = req.ip || req.headers['x-forwarded-for']?.split(",")?.[0]?.trim();
+      if (IP == null) {
+        await logError(`Couldn't get clients IP address.`);
+        return { 
+          ip: null,
+          country: null,
+          currency: default_currency,
+        }
       }
     }
 

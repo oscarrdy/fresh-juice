@@ -1,6 +1,7 @@
 // Imports
 const router = require("express").Router();
-const stripe = require("stripe")(process.env.ENVIRONMENT === "production" ? process.env.STRIPE_LIVE_SEC : process.env.STRIPE_TEST_SEC);
+// const stripe = require("stripe")(process.env.ENVIRONMENT === "production" ? process.env.STRIPE_LIVE_SEC : process.env.STRIPE_TEST_SEC);
+const stripe = require("stripe")(process.env.STRIPE_TEST_SEC);
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const Order = require("../models/order-schema");
@@ -179,7 +180,8 @@ router.post("/webhook", async (req, res) => {
     event = stripe.webhooks.constructEvent(
       payload,
       sig,
-      process.env.ENVIRONMENT === "production" ? process.env.WEBHOOK_LIVE_SEC : process.env.WEBHOOK_TEST_SEC
+      // process.env.ENVIRONMENT === "production" ? process.env.WEBHOOK_LIVE_SEC : process.env.WEBHOOK_TEST_SEC
+      process.env.WEBHOOK_TEST_SEC
     );
   }
   catch (err) {
