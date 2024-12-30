@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- General info -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Juice - View Order: <%= order.order_id %>></title>
+  <meta name="description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go. Enjoy Fresh Drinks, tasty protein shakes or healthy smoothies, Any time, Anywhere.">
+
+  <!-- Render Blocking Resources -->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/components/custom-select.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/track-order-view.css">
+  <link rel="stylesheet" href="/css/components/footer.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"></noscript>
+
+  <!-- Deferred Resources -->
+  <script defer src="/script/components/navbar.js"></script>
+  <script defer src="/script/components/custom-select.js"></script>
+  <script defer src="/script/components/currency-select.js"></script>
+  <script defer src="/script/components/mailing-list.js"></script>
+  <script defer src="/script/track-order-view.js"></script>
+  <link rel="icon" type="image/png" href="/image/logo.webp">
+  
+</head>
+<body>
+<div class="body-container">
+  
+  <header id="header">
+    <%- include("components/navbar") %>
+  </header>
+
+  <main>
+
+    <section class="sec_order">
+
+      <div class="grid_item_tracking">
+        <div class="header">
+          <p>ID: <%= order.order_id %></p>
+          <p id="created_at" data-date="<%= order.createdAt %>"></p>
+        </div>
+        <div class="tracking_container">
+          <div class="point point_1">
+            <svg viewBox="0 0 640 512"><path d="M0 488V171.3C0 145.2 15.93 121.6 40.23 111.9L308.1 4.753C315.7 1.702 324.3 1.702 331.9 4.753L599.8 111.9C624.1 121.6 640 145.2 640 171.3V488C640 501.3 629.3 512 616 512H568C554.7 512 544 501.3 544 488V223.1C544 206.3 529.7 191.1 512 191.1H128C110.3 191.1 96 206.3 96 223.1V488C96 501.3 85.25 512 72 512H24C10.75 512 0 501.3 0 488zM152 512C138.7 512 128 501.3 128 488V432H512V488C512 501.3 501.3 512 488 512H152zM128 336H512V400H128V336zM128 224H512V304H128V224z"/></svg>
+            <p>Our Warehouse</p>
+          </div>
+          <div class="line">
+            <div class="current_location" id="current_location"></div>
+          </div>
+          <div class="point point_2">
+            <svg viewBox="0 0 576 512"><path d="M511.8 287.6L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L416 100.7V64C416 46.33 430.3 32 448 32H480C497.7 32 512 46.33 512 64V185L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6L511.8 287.6z"/></svg>
+            <p>Your Address</p>
+          </div>
+        </div>
+        <div class="info_grid">
+          <div class="estimated_time_container" id="estimated_time_container" data-shipping-time="<%= order.shipping_time %>" data-shipping-status="<%= order.shipping_status %>">
+            <p>Status: <span id="span_shipping_status"><%= order.shipping_status[0].toUpperCase() + order.shipping_status.slice(1) %></span></p>
+            <p>Est. delivery date: <span id="span_delivery_date"></span></p>
+            <p>Time remaining: <span id="span_delivery_time"></span></p>
+          </div>
+          <div>
+            <button type="button" class="btn_confirm_received" id="btn_confirm_received" data-order-id="<%= order._id %>">Confirm Received</button>
+            <p class="text_confirm_received">If we don't hear from you, your order will be considered received 60 days after it was send</p>
+          </div>
+        </div>
+        <p class="contact_us_text">Need help? <a href="/contact">contact us.</a></p>
+      </div>
+      
+      <div class="grid_item_order">
+        <p class="headline">Order Details:</p>
+        <% order.line_items.forEach((item) => { %>
+          <div class="item_container">
+            <img src="<%= item.img %>" alt="<%= item.alt %>">
+            <div>
+              <p class="name"><%= item.name %> x<%= item.quantity %></p>
+              <span class="item_price" data-price="<%= item.amount_total %>" data-currency="<%= item.currency %>"></span>
+              <span class="item_unit_price" data-quantity="<%= item.quantity %>" data-price="<%= item.unit_amount %>" data-currency="<%= item.currency %>"></span>
+            </div>
+          </div>
+        <% }); %>
+        <p class="amount_total" id="amount_total" data-price="<%= order.amount_total %>" data-currency="<%= order.line_items[0].currency %>"></p>
+      </div>
+
+      <div class="grid_item_address">
+        <p class="headline">Address Details:</p>
+        <p class="address_item">address: <span><%= order.shipping_info.address.line1 %></span></p>
+        <p class="address_item">city: <span><%= order.shipping_info.address.city %></span></p>
+        <p class="address_item">state: <span><%= order.shipping_info.address.state %></span></p>
+        <p class="address_item">postal code: <span><%= order.shipping_info.address.postal_code %></span></p>
+      </div>
+ 
+    </section>
+    
+  </main>
+
+  <div class="dialog_confirm_container" id="dialog_confirm_container">
+    <div class="dialog_confirm">
+      <p class="headline">Confirm Received</p>
+      <p>Confirm that you have received your order.</p>
+      <p>This action cannot be undone.</p>
+      <div class="btn_container">
+        <button class="btn_dialog_confirm" id="btn_dialog_confirm">Confirm</button>
+        <button class="btn_dialog_cancel" id="btn_dialog_cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <%- include("components/footer") %>
+  
+</div>
+</body>
+</html>

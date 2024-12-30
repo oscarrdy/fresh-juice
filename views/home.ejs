@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- General Info -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Juice - Home</title>
+  <meta name="description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go. Enjoy Fresh Drinks, tasty protein shakes or healthy smoothies, Any time, Anywhere.">
+  
+  <!-- OG and Twitter meta tags -->
+  <meta property="of:site_name" content="Fresh Juice">
+  <meta property="og:title" content="Enjoy Fresh yet Healthy Drinks, Any time, Anywhere.">
+  <meta property="og:description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go.">
+  <meta property="og:url" content="https://shop-freshjuice.com/">
+  <meta property="og:type" content="website">                      
+  <meta property="og:image:url" content="/image/header-img-mobile.webp">        
+  <meta property="og:image:secure_url" content="/image/header-img-mobile.webp">
+  <meta property="og:image:alt" content="Fresh Juice Blender Bottles">      
+  <meta property="og:image:type" content="image/webp">                 
+  <meta property="og:image:width" content="625">                        
+  <meta property="og:image:height" content="602">                                
+  <meta name="twitter:card" content="summary">
+  
+  <!-- Render Blocking Resources-->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/components/custom-select.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/home-header.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"></noscript>
+  
+  <!-- Deferred Resources -->
+  <link rel="preload" href="/css/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/home.css"></noscript>
+  <link rel="preload" href="/css/components/swiper.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/components/swiper.css"></noscript>
+  <link rel="preload" href="/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/components/footer.css"></noscript>
+  <script defer src="/script/components/navbar.js"></script>
+  <script defer src="/script/components/custom-select.js"></script>
+  <script defer src="/script/components/currency-select.js"></script>
+  <script defer src="/script/components/swiper-minified.js"></script>
+  <script defer src="/script/components/mailing-list.js"></script>
+  <script defer src="/script/home.js"></script>
+  <link rel="icon" type="image/png" href="/image/logo.webp">
+
+</head>
+<body>
+<div class="body-container">
+  
+  <!-- Header -->
+  <header id="header">
+    <%- include("components/navbar") %>
+    <picture>
+      <source media="(max-width:500px)" srcset="/image/header-img-mobile.webp">
+      <img class="header_img" src="/image/header-img-1.webp" alt="Fresh Juice smoothies">
+    </picture>
+    <div class="header_text_container">
+      <h1>Mini. Fast. Portable.</h1>
+      <p>
+        <span>Enjoy Fresh Drinks, Any time, Anywhere.</span>
+        <span>Powerful enough to crush ice and small enough</span>
+        <span>to be taken on the go.</span>
+      </p>
+      <a href="/shop">Get Yours Now</a>
+    </div>
+  </header>
+
+  <!-- Stickybar -->
+  <div class="stickybar" id="stickybar">
+    <img loading="lazy" src="/image/cta-home-1-min.webp" alt="Wild berries protein smoothie">
+    <div class="text_container">
+      <p class="product_name">Fresh Juice Portable Blender</p>
+      <p class="product_name_small">Fresh Juice Blender</p>
+      <p class="second_line"><%= website_info.sale %>% off autumn sale</p>
+    </div>
+    <a href="/shop">Shop Now</a>
+  </div>
+
+  <!-- Features 1 -->
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Say hello to a healthier you.</h2>
+        <p>Fresh Juice blender is perfect for mixing your healthy protein shakes at the gym without making a mess!</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/feature-1.gif" alt="Fresh Juice blender in a car">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Portable and easy to use.</h2>
+        <p>Anywhere you need to go, your Fresh Juice blender goes with. Simply fill it up with your favorite flavours and blend on the go.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/feature-2.gif" alt="Fresh Juice blender at the beach">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Our customers love it.</h2>
+        <p>Sold out 5 times in the first 3 months, Fresh Juice Blender is quickly becoming a favorite among health-conscious consumers.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/feature-3.gif" alt="Fresh Juice blender in front of flowers">
+  </section>
+
+  <!-- Call to action 1 -->
+  <div class="sec_cta_1_wrapper">
+    <section class="sec_cta_1">
+      <div class="image_container" data-sale="<%= website_info.sale %>% Off">
+        <img src="/image/cta-home-1.webp" alt="Wild berries protein smoothie">
+        <img src="/image/product-img-2.webp" alt="Fresh Juice blender in the couch">
+      </div>
+      <div class="text_container">
+        <h2>Don't miss the party!</h2>
+        <div class="timer_container">
+          <p>Ending in:</p>
+          <div class="timer_content" id="countdown_container_1" data-firstVisit="<%= user.createdAt ?? Date.now() %>">
+            <div><time>13</time><small>days</small></div>
+            <div><time>20</time><small>hours</small></div>
+            <div><time>47</time><small>min</small></div>
+            <div><time>18</time><small>sec</small></div>
+          </div>
+        </div>
+        <p>Celebrating our massive support this year, we are doing a limited time mega flash sale as our gift back to you! <strong id="countdown_date">- ending soon</strong></p>
+        <a href="/shop">Order Your Blender Now!</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- How it works -->
+  <section class="sec_how_it_works">
+    <h2>How it works</h2>
+    <div class="container">
+      <img src="/image/how-1.gif" alt="Filling blender with fruits">
+      <img src="/image/how-2.gif" alt="Filling blender with juice">
+      <img src="/image/how-3.gif" alt="Fresh Juice blending a smoothie">
+      <img src="/image/how-4.gif" alt="Smoothie being poured">
+    </div>
+    <ul>
+      <li>Add your desired fresh/frozen fruits or powders/mixes.</li>
+      <li>Pour your liquid of choice from either side.</li>
+      <li>Seal the bottle and push the button on the bottom to blend.</li>
+      <li>Enjoy your refreshing beverage!</li>
+    </ul>
+  </section>
+
+  <!-- Features 2 -->
+  <section class="sec_fade_in" style="display:none;"></section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Wireless Charging.</h2>
+        <p>No need to worry about flimsy charging ports anymore - we include wireless charging stations which will get you 15+ blends from just 1 hour of charging!</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/charging.gif" alt="Fresh Juice blender placed on wireless charger">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Self Cleaning.</h2>
+        <p>Tired of scrubbing your bulky blenders? Make this a problem of the past! Simply fill your Fresh Juice blender with water and let it clean it self.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/cleaning.webp" alt="Fresh Juice blender cleaned with water">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Perfect for all Occasions.</h2>
+        <p>Whether you need a snack at work, a refresher at home, or energizer at the gym - your fresh juice blender have got you covered.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/product-img-5.webp" alt="Elegant blender bottle in hand">
+  </section>
+
+  <!-- Call to action 2 -->
+  <div class="sec_cta_2_wrapper">
+    <section class="sec_cta_2">
+      <div class="image_container" data-sale="<%= website_info.sale %>% Off">
+        <img src="/image/cta-home-2.webp" alt="Coconut chocolate banana smoothie">
+        <img src="/image/cta-secondary.webp" alt="Pink Fresh Juice blender bottle">
+      </div>
+      <div class="text_container">
+        <h2>Fun for everyone!</h2>
+        <div class="timer_container">
+          <p><%= website_info.sale %>% off<br>ending in:</p>
+          <div class="timer_content" id="countdown_container_2">
+            <div><time>13</time><small>days</small></div>
+            <div><time>20</time><small>hours</small></div>
+            <div><time>47</time><small>min</small></div>
+            <div><time>18</time><small>sec</small></div>
+          </div>
+        </div>
+        <blockquote><span>"</span>Got it for a bit of fun for the kids. After trying out some of the recipes, we got hooked and will be getting another one for me and the wife. One of our the best investments yet.<span>"</span></blockquote>
+        <p> - Alex from <%= user.country ?? "the UK" %></p>
+        <div class="btn_container">
+          <a href="/shop">Get Yours Now!</a>
+          <a class="secondary" href="/shop#sec_reviews">See All Reviews</a>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Recipes -->
+  <section class="sec_recipes" id="sec_recipes">
+    <h2>Get Inspired by our Recipes</h2>
+    <div class="swiper-container swiper_recipes_container">
+      <div class="swiper swiper_recipes">
+        <div class="swiper-wrapper" id="swiper_recipes_slides_container"></div>
+      </div>
+      <div class="swiper-button-next swiper_recipes_button_next"></div>
+      <div class="swiper-button-prev swiper_recipes_button_prev"></div>
+      <div class="swiper-pagination swiper_recipes_pagination" id="swiper_recipes_pagination"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <%- include("components/footer") %>
+  
+</div>
+</body>
+</html>

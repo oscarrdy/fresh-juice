@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- General info -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Juice - Return Policy</title>
+  <meta name="description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go. Enjoy Fresh Drinks, tasty protein shakes or healthy smoothies, Any time, Anywhere.">
+
+  <!-- Resources -->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/components/custom-select.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/return-policy.css">
+  <link rel="stylesheet" href="/css/components/footer.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"></noscript>
+
+  <!-- Deferred Resources -->
+  <script defer src="/script/components/navbar.js"></script>
+  <script defer src="/script/components/custom-select.js"></script>
+  <script defer src="/script/components/currency-select.js"></script>
+  <script defer src="/script/components/mailing-list.js"></script>
+  <link rel="icon" type="image/png" href="/image/logo.webp">
+  
+</head>
+<body>
+<div class="body-container">
+  
+  <header id="header">
+    <%- include("components/navbar") %>
+  </header>
+
+  <main class="main">
+    <h1>Return & Refund Policy</h1>
+    <section>
+      <h2>REFUNDS</h2>
+      <p>We are confident that you will be more than satisfied with our service. However, you are eligible to receive a <strong>full refund up until 30 days after receiving your order</strong>, if any of the following conditions are true:</p>
+      <ul>
+        <li>The goods are damaged or are not working as intended.</li>
+        <li>Parts of the order is missing.</li>
+        <li>You received the wrong order.</li>
+        <li>The order was never received. (Only eligible 75 days after the order was placed, and as long as we haven't explicity notified you of any delays.)</li>
+      </ul>
+      <p>The refund will only cover the cost of the items you did not receive in good condition. (e.g. if you ordered two items, and only one is missing or damaged, you will receive a refund for that one item only.) Shipping prices are considered part of the price of the item and will therefore also be included in the refund.</p>
+      <p>We do require proof of purchase (ideally an e-mail receipt) as well as proof of damages. Without proof, we may not satisfy your request.</p>
+      <p>We may also require that you return the items to us as instructed by our team. In this case, <strong>we offer to cover any and all shipping fees</strong> as long as that sum is agreed upon and specified before you send us the package. Please to not send us any packages without contacting us and coming to an agreement with us first - doing so will not result in a refund.</p>
+      <p>To issue a refund request please contact us by e-mail and provide as much detail as possible. You will then have to follow the instruction of our team to provide proof and answer our mandatory questions.</p>
+    </section>
+    <section>
+      <h2>CANCELLATION</h2>
+      <p>After placing an order, you agree that the items you have ordered are the ones you want and that no changes to this order or cancellation of the order will be accepted. You should carefully check that your order is accurate before you submit it. You may however, be able to return goods and request refunds as described elsewhere in our return policy.</p>
+      <p>You agree that the address and personal information provided in your order is correct and up to date. We are not liable for any losses caused by incorrect or outdated information given in your order.</p>
+      <p>Before we ship your order, if we cannot contact you about your order (if needed) using the contact details you provided in the order, after having made reasonable attempts to contact you, we will cancel your order and refund any money paid.</p>
+    </section>
+  </main>
+
+  <%- include("components/footer") %>
+  
+</div>
+</body>
+</html>

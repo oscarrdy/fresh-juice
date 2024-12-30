@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- General info -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Juice - Admin Panel</title>
+  <meta name="description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go. Enjoy Fresh Drinks, tasty protein shakes or healthy smoothies, Any time, Anywhere.">
+  
+  <!-- Render Blocking Resources -->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/components/custom-select.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/components/footer.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"></noscript>
+
+  <!-- Deferred Resources -->
+  <script defer src="/script/components/navbar.js"></script>
+  <script defer src="/script/components/custom-select.js"></script>
+  <script defer src="/script/components/currency-select.js"></script>
+  <script defer src="/script/components/mailing-list.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js" integrity="sha512-/hVAZO5POxCKdZMSLefw30xEVwjm94PAV9ynjskGbIpBvHO9EBplEcdUlBdCKutpZsF+La8Ag4gNrG0gAOn3Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="/script/admin.js"></script>
+  <link rel="icon" type="image/png" href="/image/logo.webp">
+  
+</head>
+<body>
+<div class="body-container">
+  
+  <header id="header">
+    <%- include("components/navbar") %>
+  </header>
+  
+  <main>
+    <div class="admin_panel">
+      <nav aria-label="admin-panel-navigation" class="admin_panel_nav">
+        <ul id="admin_nav_btns">
+          <li><button data-section="sec_orders" type="button" class="selected">Orders</button></li>
+          <li><button data-section="sec_feedback" type="button">Feedback</button></li>
+          <li><button data-section="sec_questions" type="button">Questions</button></li>
+          <li><button data-section="sec_reviews" type="button">Reviews</button></li>
+        </ul>
+      </nav>
+      <section class="sec_orders admin_panel_section open" id="sec_orders"></section>
+      <section class="sec_feedback admin_panel_section" id="sec_feedback"></section>
+      <section class="sec_questions admin_panel_section" id="sec_questions"></section>
+      <section class="sec_reviews admin_panel_section" id="sec_reviews"></section>
+    </div>
+  </main>
+
+  <%- include("components/footer") %>
+  
+</div>
+</body>
+</html>

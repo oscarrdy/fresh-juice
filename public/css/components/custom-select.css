@@ -1,0 +1,86 @@
+/* Custom Select */
+.custom-select-container {
+  --cs-container-width: 4.25rem;
+  --cs-container-height: 2rem;
+  --cs-dropdown-height: 12rem;
+  --cs-clr-background: transparent;
+  --cs-clr-hovered-item: var(--clr-primary, hsl(200, 100%, 50%));
+  --cs-clr-selected-item: var(--clr-primary-faded, hsl(200, 100%, 70%));
+  --cs-clr-border: var(--clr-black, black);
+  --cs-font-size: 1rem;
+  background-color: var(--cs-clr-background);
+  position: relative;
+}
+.custom-select-container > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  width: var(--cs-container-width);
+  height: var(--cs-container-height);
+  border: 0.1rem solid var(--cs-clr-border);
+  padding: 0 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--cs-font-size);
+}
+.custom-select-container > span::after {
+  --size: 4px;
+  content: '';
+  display: inline-block;
+  border: var(--size) solid transparent;
+  border-top-color: var(--cs-clr-border);
+  margin-top: var(--size);
+}
+.custom-select-container > ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-height: var(--cs-dropdown-height);
+  padding: 0;
+  margin: 0;
+  border: 0.1rem solid var(--cs-clr-border);
+  border-top: none;
+  background-color: var(--cs-clr-background);
+  overflow-y: auto; 
+  z-index: 10;
+}
+.custom-select-container.shown > ul {
+  display: block;
+}
+.custom-select-container > ul > li { 
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: var(--cs-font-size);
+}
+.custom-select-container > ul > li:hover {
+  background-color: var(--cs-clr-hovered-item);
+}
+.custom-select-container > ul > li.selected {
+  background-color: var(--cs-clr-selected-item);
+}
+
+/* Modifier - semi rounded corners */
+.--semi-rounded-corners > span {
+  border-radius: 5px;
+}
+.--semi-rounded-corners.shown > span {
+  border-radius: 5px 5px 0 0;
+}
+.--semi-rounded-corners.shown > ul {
+  border-radius: 0 0 5px 5px;
+}
+
+/* Modifier - rounded corners */
+.--rounded-corners > span {
+  border-radius: calc(var(--cs-container-height) / 2);
+}
+.--rounded-corners.shown > span {
+  border-radius: calc(var(--cs-container-height) / 2) calc(var(--cs-container-height) / 2) 0 0;
+}
+.--rounded-corners.shown > ul {
+  border-radius: 0 0 calc(var(--cs-container-height) / 2) calc(var(--cs-container-height) / 2);
+}
+.--rounded-corners > ul::-webkit-scrollbar-track {
+  margin-bottom: calc((var(--cs-container-height) / 2) - 5px);
+}

@@ -1,0 +1,67 @@
+.sec_admin_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem var(--page-margin) 10rem var(--page-margin);
+}
+.sec_admin_login > h1 {
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  font-weight: var(--font-weight-light);
+}
+.sec_admin_login > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.sec_admin_login input {
+  padding: 1rem;
+  height: 3rem;
+  border: 0.1rem solid var(--clr-black);
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: white;
+  transition: border 300ms;
+}
+.sec_admin_login input[type="password"]:not(:placeholder-shown) {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sec_admin_login input:focus {
+  outline: none;
+  border: 0.1rem solid var(--clr-primary);
+  border-right: none;
+}
+.sec_admin_login input:focus + button {
+  outline: none;
+  background-color: var(--clr-primary);
+  border: 0.1rem solid var(--clr-primary);
+  border-left: none;
+}
+.sec_admin_login button {
+  height: 3rem;
+  padding: 0 0.5rem;
+  background-color: var(--clr-black);
+  color: white;
+  border: none;
+  border: 0.1rem solid var(--clr-black);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 300ms, color 300ms, border 300ms;
+}
+.sec_admin_login button:hover,
+.sec_admin_login button:focus-visible {
+  background-color: var(--clr-primary-faded) !important;
+  color: var(--clr-black);
+  outline: none;
+}
+.sec_admin_login > .admin_error_text {
+  color: var(--clr-error);
+  margin-top: 0.5rem;
+}

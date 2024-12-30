@@ -1,0 +1,37 @@
+<footer>
+  <div class="footer__grid">
+
+    <div class="footer__ml-container">
+      <p class="headline">Join our mailing list</p>
+      <p class="text">Get notified about our next flash sale, new product launches and much more.</p>
+      <form action="/mailing-list/subscribe" method="POST" id="form_mailing_list" <% if (user.email) { %> class="submitted" <% } %>>
+        <input type="email" size="10" placeholder="yourmail@email.com" id="inp_email_ml" <% if (user.email) { %> value="<%= user.email %>" <% } %>>
+        <div class="submitted-container">
+          <div class="check-mark"></div>
+          <p id="submitted_mail"><%= user.email %></p>
+        </div>
+        <button type="submit" class="btn-subscribe" id="btn_join_ml">Join</button>
+      </form>
+      <button type="button" class="btn-unsubscribe <% if (user.email) { %> submitted <% } %>" id="btn_unsubscribe">Unsubscribe</button>
+    </div>
+
+    <div class="contact-container">
+      <p class="headline">Contact Us</p>
+      <ul>
+        <li><a target="_blank" href="<%= website_info.instagram_link %>">Instagram</a></li>
+        <li><a target="_blank" href="<%= website_info.tiktok_link %>">TikTok</a></li>
+        <li><a target="_blank" href="mailto:theviralshop@outlook.com?subject=<%= website_info.name_email %>%20Support:">Email</a></li>
+      </ul>
+    </div>
+
+    <div class="service-container">
+      <p class="headline">Service</p>
+      <ul>
+        <li><a href="/terms-of-service">Terms of service</a></li>
+        <li><a href="/return-policy">Return policy</a></li>
+        <li><a href="/privacy-policy">Privacy policy</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</footer>

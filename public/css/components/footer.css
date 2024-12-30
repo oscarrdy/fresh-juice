@@ -1,0 +1,175 @@
+/* footer */
+footer {
+  background-color: var(--clr-black);
+  padding: clamp(4rem, var(--page-margin), 5rem) 0 calc(clamp(4rem, var(--page-margin), 5rem) + env(safe-area-inset-bottom)) 0;
+}
+.footer__grid {
+  margin: 0 var(--page-margin);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+/* Mailing List */
+.footer__ml-container {
+  grid-column: 1 / 3;
+}
+.footer__ml-container > .headline{
+  color: var(--clr-white);
+  font-size: 1.5rem;
+}
+.footer__ml-container > .text {
+  color: var(--clr-white);
+  font-size: 0.875rem;
+  margin: .4rem 0 1rem 0;
+}
+.footer__ml-container > form {
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.footer__ml-container > form > input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+  background-color: var(--clr-white);
+  font-size: 1rem;
+}
+.footer__ml-container > form > .submitted-container {
+  padding: 0.75rem 1rem;
+  display: none;
+  flex: 1;
+  color: var(--clr-white);
+  border-bottom: 0.1rem solid var(--clr-primary);
+  overflow: hidden;
+}
+.footer__ml-container > form > .submitted-container > .check-mark {
+  --thickness: 0.2rem;
+  --height: 1rem;
+  --width: 0.5rem;
+  display: inline-block;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  border-bottom: var(--thickness) solid var(--clr-primary);
+  border-right: var(--thickness) solid var(--clr-primary);
+}
+.footer__ml-container > form > .submitted-container > p {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-left: 0.75rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+.footer__ml-container > form.submitted > input {
+  display: none;
+}
+.footer__ml-container > form.submitted > .submitted-container {
+  display: flex;
+}
+.footer__ml-container > form:not(.submitted) > .btn-subscribe {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+}
+.footer__ml-container > form > .btn-subscribe {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  transition: background-color 300ms, color 300ms;
+}
+.footer__ml-container > form > .btn-subscribe:hover,
+.footer__ml-container > form > .btn-subscribe:focus-visible {
+  background-color: var(--clr-primary-faded);
+  color: var(--clr-black);
+}
+.footer__ml-container > .btn-unsubscribe {
+  display: none;
+  margin-top: 0.25rem;
+  font-size: 0.675rem;
+  color: white;
+  opacity: 0.3;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+.footer__ml-container > .btn-unsubscribe.submitted {
+  display: block;
+}
+.footer__ml-container > .btn-unsubscribe:hover,
+.footer__ml-container > .btn-unsubscribe:focus-visible {
+  opacity: 0.4;
+}
+
+/* Contact List */
+.contact-container > .headline {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.contact-container > ul > li {
+  list-style: none;
+}
+.contact-container > ul > li > a {
+  text-decoration: none;
+  color: var(--clr-primary-faded);
+  white-space: nowrap;
+  transition: color 300ms;
+  font-size: 0.875rem;
+}
+.contact-container > ul > li > a:hover,
+.contact-container > ul > li > a:focus {
+  color: var(--clr-primary);
+}
+
+/* Service List */
+.service-container {
+  margin-left: auto;
+}
+.service-container > .headline {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.service-container > ul > li {
+  list-style: none;
+}
+.service-container > ul > li > a {
+  text-decoration: none;
+  color: var(--clr-primary-faded);
+  white-space: nowrap;
+  transition: color 300ms;
+  font-size: 0.875rem;
+}
+.service-container > ul > li > a:hover,
+.service-container > ul > li > a:focus {
+  color: var(--clr-primary);
+}
+
+/* Details */
+.footer__grid li + li {
+  margin-top: 0.5rem;
+}
+@media (min-width: 800px) {
+  .footer__grid {
+    display: flex;
+    column-gap: var(--page-margin);
+  }
+  .service-container {
+    margin-left: 0;
+  }
+  .service-container > .headline,
+  .contact-container > .headline {
+    margin-bottom: 1rem;
+  }
+  .footer__grid li + li {
+    margin-top: 0.75rem;
+  }
+}

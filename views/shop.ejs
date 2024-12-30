@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- General info -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Juice - Shop</title>
+  <meta name="description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go. Enjoy Fresh Drinks, tasty protein shakes or healthy smoothies, Any time, Anywhere.">
+  
+  <!-- OG and Twitter meta tags -->
+  <meta property="of:site_name" content="Fresh Juice">
+  <meta property="og:title" content="Enjoy Fresh yet Healthy Drinks, Anytime and Anywhere.">
+  <meta property="og:description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go.">
+  <meta property="og:url" content="https://shop-freshjuice.com/">
+  <meta property="og:type" content="website">                            
+  <meta property="og:image:url" content="/image/header-img-mobile.webp">        
+  <meta property="og:image:secure_url" content="/image/header-img-mobile.webp">
+  <meta property="og:image:alt" content="Fresh Juice Blender Bottles">      
+  <meta property="og:image:type" content="image/webp">                 
+  <meta property="og:image:width" content="625">                        
+  <meta property="og:image:height" content="602">                                
+  <meta name="twitter:card" content="summary">
+  
+  <!-- Render Blocking Resources -->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/components/custom-select.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/shop-header.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"></noscript>
+
+  <!-- Deferred Resources -->
+  <link rel="preload" href="/css/shop.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/shop.css"></noscript>
+  <link rel="preload" href="/css/components/swiper.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/components/swiper.css"></noscript>
+  <link rel="preload" href="/css/reviews.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/reviews.css"></noscript>
+  <link rel="preload" href="/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/components/footer.css"></noscript>
+  <script defer src="/script/components/navbar.js"></script>
+  <script defer src="/script/components/custom-select.js"></script>
+  <script defer src="/script/components/currency-select.js"></script>
+  <script defer src="/script/components/swiper-minified.js"></script>
+  <script defer src="/script/components/mailing-list.js"></script>
+  <script defer src="/script/shop.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js" integrity="sha512-/hVAZO5POxCKdZMSLefw30xEVwjm94PAV9ynjskGbIpBvHO9EBplEcdUlBdCKutpZsF+La8Ag4gNrG0gAOn3Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="/script/components/reviews.js"></script>
+  <link rel="icon" type="image/png" href="/image/logo.webp">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "Fresh Juice Portable Blender",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "<%= review_data.average_stars %>",
+        "reviewCount": "<%= review_data.total_reviews %>"
+      }
+    }
+  </script>
+
+</head>
+<body>
+<div class="body-container">
+  
+  <!-- Header -->
+  <header id="header">
+    <%- include("components/navbar") %>
+  </header>
+
+  <main>
+    <h1 style="display:none;">Fresh Juice Portable Blender</h1>
+
+    <section class="product_sec">
+
+      <!-- Product image swiper -->
+      <div class="product_img_container">
+        <div class="sticky_image_container">
+          <img src="/image/fj-pink.webp" alt="Fresh Juice Portable Blender (pink)" class="main_display_image" id="main_display_image"></img>
+          <div class="swiper-container swiper_product_container">
+            <div class="swiper swiper_product">
+              <div class="swiper-wrapper">
+                <img class="swiper-slide" src="/image/fj-pink.webp" alt="Fresh Juice Portable Blender (pink)">
+                <img class="swiper-slide" src="/image/fj-white.webp" alt="Fresh Juice Portable Blender (white)">
+                <img class="swiper-slide" src="/image/product-img-1.webp" alt="Girl holding Fresh Juice blender in bed">
+                <img class="swiper-slide" src="/image/product-img-2.webp" alt="Girl holding Fresh Juice blender in couch">
+                <img class="swiper-slide" src="/image/product-img-3.webp" alt="Girl holding portable blender bottle">
+                <img class="swiper-slide" src="/image/product-img-4.jpg" alt="Girl work out portable blender bottle">
+                <img class="swiper-slide" src="/image/product-img-5.webp" alt="Elegant Fresh Juice blender">
+                <img class="swiper-slide" src="/image/cta-home-1.webp" alt="Wild berries protein smoothie">
+                <img class="swiper-slide" src="/image/cta-home-2.webp" alt="Coconut chocolate banana smoothie">
+                <img class="swiper-slide" src="/image/product-img-packaging.webp" alt="Fresh Juice portable blender packaging">
+              </div>
+            </div>
+            <div class="swiper-button-next swiper_product_button_next"></div>
+            <div class="swiper-button-prev swiper_product_button_prev"></div>
+            <div class="swiper-pagination swiper_product_pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product info container -->
+      <div class="product_info_container">
+
+        <div class="sticky_checkout_wrapper">
+          <p class="product_name">Fresh Juice Portable Blender</p>
+          <button class="product_rating_container" id="btn_see_reviews" type="button">
+            <div class="stars_container rating<%= review_data.average_stars_svg %>">
+              <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+            </div>
+            <span class="reviews_amount"><%= review_data.total_reviews %> reviews</span>
+          </button>
+          <p class="product_description">Health and tastiness does NOT have to be mortal enemies! Enjoy both healthy and mouth-watering smoothies, protein shakes or whatever you so desire anywhere anytime.</p>
+          <p class="product_price">
+            <span class="display_price" id="display_price"></span>
+            <span class="display_price_old" id="display_price_old"></span>
+            <span class="discount">-<%= website_info.sale %>%</span>
+            <span class="best_seller">best seller</span>
+          </p>
+  
+          <div class="timer_container">
+            <p><%= website_info.sale %>% off<br>ending in:</p>
+            <div class="timer_content" id="countdown_container_1" data-firstVisit="<%= user.createdAt ?? Date.now() %>">
+              <div><time>13</time><small>days</small></div>
+              <div><time>20</time><small>hours</small></div>
+              <div><time>47</time><small>min</small></div>
+              <div><time>18</time><small>sec</small></div>
+            </div>
+          </div>
+  
+          <form id="form_checkout" action="/shop/create-payment-session" method="POST">
+            <div class="color_options_wrapper">
+              <p class="options_headline">Color:</p>
+              <div class="color_options_container" id="color_options_container">
+                <% default_prices.forEach((opt, i) => { %>
+                  <label class="color_option" for="inp_opt_<%= i %>">
+                    <input type="checkbox" name="option_<%= i %>" id="inp_opt_<%= i %>" data-slide="<%= opt.swiper_slide %>" data-option="<%= opt.name %>">
+                    <img src="<%= opt.img %>" alt="<%= opt.alt %>">
+                  </label>
+                <% }) %>
+              </div>
+            </div>
+    
+            <div class="cart_container">
+              <p>Cart:</p>
+              <div class="cart_items_container" id="cart_items_container"></div>
+            </div>
+    
+            <div class="price_calculations" id="price_calculations">
+              <p>Shipping: <span>FREE</span></p>
+              <p>TAX / VAT: <span>FREE</span></p>
+              <p id="quantity_discount">Quantity Discount: <span>-0%</span></p>
+              <p>Total: <span id="price_total"></span></p>
+            </div>
+
+            <div class="checkout_guarantees">
+              <div><div class="checkmark"></div><span>30 Days Money Back Guaranteed.</span></div>
+              <div><div class="checkmark"></div><span>7 - 21 Days Estimated Delivery.</span></div>
+            </div>
+            
+            <button class="btn_checkout" id="btn_checkout" type="submit">Checkout</button>
+            
+            <div class="checkout_flex_container">
+              <div class="badge_googlepay payment_badge">
+                <svg width="41" height="17">
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M19.526 2.635v4.083h2.518c.6 0 1.096-.202 1.488-.605.403-.402.605-.882.605-1.437 0-.544-.202-1.018-.605-1.422-.392-.413-.888-.62-1.488-.62h-2.518zm0 5.52v4.736h-1.504V1.198h3.99c1.013 0 1.873.337 2.582 1.012.72.675 1.08 1.497 1.08 2.466 0 .991-.36 1.819-1.08 2.482-.697.665-1.559.996-2.583.996h-2.485v.001zm7.668 2.287c0 .392.166.718.499.98.332.26.722.391 1.168.391.633 0 1.196-.234 1.692-.701.497-.469.744-1.019.744-1.65-.469-.37-1.123-.555-1.962-.555-.61 0-1.12.148-1.528.442-.409.294-.613.657-.613 1.093m1.946-5.815c1.112 0 1.989.297 2.633.89.642.594.964 1.408.964 2.442v4.932h-1.439v-1.11h-.065c-.622.914-1.45 1.372-2.486 1.372-.882 0-1.621-.262-2.215-.784-.594-.523-.891-1.176-.891-1.96 0-.828.313-1.486.94-1.976s1.463-.735 2.51-.735c.892 0 1.629.163 2.206.49v-.344c0-.522-.207-.966-.621-1.33a2.132 2.132 0 0 0-1.455-.547c-.84 0-1.504.353-1.995 1.062l-1.324-.834c.73-1.045 1.81-1.568 3.238-1.568m11.853.262l-5.02 11.53H34.42l1.864-4.034-3.302-7.496h1.635l2.387 5.749h.032l2.322-5.75z" fill="#FFF"/>
+                    <path d="M13.448 7.134c0-.473-.04-.93-.116-1.366H6.988v2.588h3.634a3.11 3.11 0 0 1-1.344 2.042v1.68h2.169c1.27-1.17 2.001-2.9 2.001-4.944" fill="#4285F4"/>
+                    <path d="M6.988 13.7c1.816 0 3.344-.595 4.459-1.621l-2.169-1.681c-.603.406-1.38.643-2.29.643-1.754 0-3.244-1.182-3.776-2.774H.978v1.731a6.728 6.728 0 0 0 6.01 3.703" fill="#34A853"/>
+                    <path d="M3.212 8.267a4.034 4.034 0 0 1 0-2.572V3.964H.978A6.678 6.678 0 0 0 .261 6.98c0 1.085.26 2.11.717 3.017l2.234-1.731z" fill="#FABB05"/>
+                    <path d="M6.988 2.921c.992 0 1.88.34 2.58 1.008v.001l1.92-1.918C10.324.928 8.804.262 6.989.262a6.728 6.728 0 0 0-6.01 3.702l2.234 1.731c.532-1.592 2.022-2.774 3.776-2.774" fill="#E94235"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="badge_applepay payment_badge">
+                <svg width="2.43em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 211">
+                  <path d="M93.552 27.103c-6 7.1-15.602 12.702-25.203 11.901c-1.2-9.6 3.5-19.802 9.001-26.103C83.35 5.601 93.852.4 102.353 0c1 10.001-2.9 19.802-8.8 27.103Zm8.701 13.802c-13.902-.8-25.803 7.9-32.404 7.9c-6.7 0-16.802-7.5-27.803-7.3c-14.301.2-27.603 8.3-34.904 21.202c-15.002 25.803-3.9 64.008 10.601 85.01c7.101 10.401 15.602 21.802 26.803 21.402c10.602-.4 14.802-6.9 27.604-6.9c12.901 0 16.602 6.9 27.803 6.7c11.601-.2 18.902-10.4 26.003-20.802c8.1-11.801 11.401-23.303 11.601-23.903c-.2-.2-22.402-8.7-22.602-34.304c-.2-21.402 17.502-31.603 18.302-32.203c-10.002-14.802-25.603-16.402-31.004-16.802Zm80.31-29.004V167.82h24.202v-53.306h33.504c30.603 0 52.106-21.002 52.106-51.406c0-30.403-21.103-51.206-51.306-51.206h-58.507Zm24.202 20.403h27.903c21.003 0 33.004 11.201 33.004 30.903c0 19.702-12.001 31.004-33.104 31.004h-27.803V32.304ZM336.58 169.019c15.202 0 29.303-7.7 35.704-19.902h.5v18.702h22.403V90.21c0-22.502-18.002-37.004-45.706-37.004c-25.703 0-44.705 14.702-45.405 34.904h21.803c1.8-9.601 10.7-15.902 22.902-15.902c14.802 0 23.103 6.901 23.103 19.603v8.6l-30.204 1.8c-28.103 1.7-43.304 13.202-43.304 33.205c0 20.202 15.701 33.603 38.204 33.603Zm6.5-18.502c-12.9 0-21.102-6.2-21.102-15.702c0-9.8 7.901-15.501 23.003-16.401l26.903-1.7v8.8c0 14.602-12.401 25.003-28.803 25.003Zm82.01 59.707c23.603 0 34.704-9 44.405-36.304L512 54.706h-24.603l-28.503 92.11h-.5l-28.503-92.11h-25.303l41.004 113.513l-2.2 6.901c-3.7 11.701-9.701 16.202-20.402 16.202c-1.9 0-5.6-.2-7.101-.4v18.702c1.4.4 7.4.6 9.201.6Z"/>
+                </svg>
+              </div>
+              <img class="badge_klarna" src="/image/icon/badge-klarna.png" alt="Klarna">
+            </div>
+          </form>
+        </div>
+          
+        <div class="trust_badges_container">
+          <div class="trust_badge">
+            <img loading="lazy" src="/image/icon/icon-shipping.svg" alt="Free shipping">
+            <p>Free Shipping</p>
+          </div>
+          <div class="trust_badge">
+            <img loading="lazy" src="/image/icon/icon-returns.svg" alt="Free returns">
+            <p>Free Returns</p>
+          </div>
+          <div class="trust_badge">
+            <img loading="lazy" src="/image/icon/icon-packaging.svg" alt="Eco friendly packaging">
+            <p>Eco Packaging</p>
+          </div>
+        </div>
+
+        <div class="discount_table">
+          <div class="discount_table_heading">
+            <p>Buy more, Save more!</p>
+          </div>
+          <div class="discount_table_row">
+            <p>Buy 2 or more</p>
+            <p>Get 5% Off</p>
+          </div>
+          <div class="discount_table_row">
+            <p>Buy 4 or more</p>
+            <p>Get 10% Off</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Stickybar -->
+    <div class="stickybar" id="stickybar">
+      <p class="stickybar_text">One click away from a new you!</p>
+      <div class="stickybar_cart_container">
+        <div class="stickybar_img_container" id="stickybar_img_container" data-quantity="1">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+        <p class="stickybar_quantity">x<span class="span_quantity" id="stickybar_span_quantity">1</span></p>
+      </div>
+      <button class="stickybar_btn_edit_cart" id="stickybar_btn_edit_cart">Edit Cart</button>
+      <button class="stickybar_btn_checkout" id="stickybar_btn_checkout" type="submit" form="form_checkout">Checkout</button>
+    </div>
+
+  </main>
+
+  <!-- Features 1 -->
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Bring health, fun, and taste back to your life.</h2>
+        <p>Fresh Juice blender is perfect for giving you a mixed, healthy and tasty diet any time anywhere at the press of a button.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/feature-4.gif" alt="Delicious smoothies being mixed by Fresh Juice">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Portable and easy to use.</h2>
+        <p>Anywhere you need to go, your Fresh Juice blender goes with. Simply fill it up with your favorite flavours and blend on the go.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/feature-5.gif" alt="Portable Fresh Juice Blender in pool">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>A convenient way to enjoy a healthy snack.</h2>
+        <p>Never skip a meal again - with your fresh juice blender you can blend anything, anywhere, any time, into a delicious meal.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/feature-6.gif" alt="Fresh Juice blender making a snack at work">
+  </section>
+
+  <!-- How it works -->
+  <section class="sec_how_it_works">
+    <h2>How it works</h2>
+    <div class="container">
+      <img src="/image/how-1.gif" alt="Filling blender with fruits">
+      <img src="/image/how-2.gif" alt="Filling blender with juice">
+      <img src="/image/how-3.gif" alt="Fresh Juice blending a smoothie">
+      <img src="/image/how-4.gif" alt="Smoothie being poured">
+    </div>
+    <ul>
+      <li>Add your desired fresh/frozen fruits or powders/mixes.</li>
+      <li>Pour your liquid of choice from either side.</li>
+      <li>Seal the bottle and push the button on the bottom to blend.</li>
+      <li>Enjoy your refreshing beverage!</li>
+    </ul>
+  </section>
+
+  <!-- Call to action -->
+  <div class="sec_cta_1_wrapper">
+    <section class="sec_cta_1">
+      <div class="image_container" data-sale="<%= website_info.sale %>% Off">
+        <img src="/image/cta-shop-1.webp" alt="Dragon fruit smoothie">
+        <img src="/image/cta-secondary.webp" alt="Pink Fresh Juice blender bottle">
+      </div>
+      <div class="text_container">
+        <h2>Our Customers Approve!</h2>
+        <div class="stars_container rating10 sec_cta_1_stars">
+          <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+        </div>
+        <blockquote><span>"</span>My boyfriend got me this and we love it so much. We often make each other smoothies and I even found my self a new hobby mixing cocktails for our weekends!<span>"</span></blockquote>
+        <p> - Isabella from <%= user.country ?? "the UK" %></p>
+        <button id="btn_cta_1">Get Yours Now!</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Features 2 -->
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Wireless Charging.</h2>
+        <p>No need to worry about flimsy charging ports anymore - we include wireless charging stations which will get you 15+ blends from just 1 hour of charging!</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/charging.gif" alt="Fresh Juice blender placed on wireless charger">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>No need to race home for your protein.</h2>
+        <p>Fresh Juice blender is perfect for mixing your healthy protein shakes at the gym without making a mess!</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/feature-1.gif" alt="Fresh Juice blender in a car">
+  </section>
+  <section class="sec_fade_in">
+    <div class="text_container">
+      <div class="background">
+        <h2>Self Cleaning.</h2>
+        <p>Tired of scrubbing your bulky blenders? Make this a problem of the past! Simply fill your Fresh Juice blender with water and let it clean it self.</p>
+      </div>
+    </div>
+    <img loading="lazy" src="/image/cleaning.gif" alt="Fresh Juice blender cleaning with water">
+  </section>
+
+  <!-- Reviews -->
+  <section class="sec_reviews" id="sec_reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews_info_container">
+      <div class="average">
+        <p class="rating"><span><%= review_data.average_stars %></span>/5</p>
+        <div class="stars_container rating<%= review_data.average_stars_svg %> review_info_stars">
+          <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+          <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+        </div> 
+        <p class="amount">from <%= review_data.total_reviews %> reviews</p>
+      </div>
+      <div class="statistics">
+        <div>
+          <div class="div_star"><span>5</span><svg class="star_svg" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg></div>
+          <div class="div_progress"><div class="progress_bar"><div class="reviews_progress_fill" data-percentage="<%= Math.round((review_data.total_5_stars / review_data.total_reviews + Number.EPSILON) * 100) / 100 %>"></div></div></div>
+          <div class="div_amount"><div class="review_amount">(<%= review_data.total_5_stars %>)</div></div>
+        </div>
+        <div>
+          <div class="div_star"><span>4</span><svg class="star_svg" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg></div>
+          <div class="div_progress"><div class="progress_bar"><div class="reviews_progress_fill" data-percentage="<%= Math.round((review_data.total_4_stars / review_data.total_reviews + Number.EPSILON) * 100) / 100 %>"></div></div></div>
+          <div class="div_amount"><div class="review_amount">(<%= review_data.total_4_stars %>)</div></div>
+        </div>
+        <div>
+          <div class="div_star"><span>3</span><svg class="star_svg" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg></div>
+          <div class="div_progress"><div class="progress_bar"><div class="reviews_progress_fill" data-percentage="<%= Math.round((review_data.total_3_stars / review_data.total_reviews + Number.EPSILON) * 100) / 100 %>"></div></div></div>
+          <div class="div_amount"><div class="review_amount">(<%= review_data.total_3_stars %>)</div></div>
+        </div>
+        <div>
+          <div class="div_star"><span>2</span><svg class="star_svg" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg></div>
+          <div class="div_progress"><div class="progress_bar"><div class="reviews_progress_fill" data-percentage="<%= Math.round((review_data.total_2_stars / review_data.total_reviews + Number.EPSILON) * 100) / 100 %>"></div></div></div>
+          <div class="div_amount"><div class="review_amount">(<%= review_data.total_2_stars %>)</div></div>
+        </div>
+        <div>
+          <div class="div_star"><span>1</span><svg class="star_svg" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg></div>
+          <div class="div_progress"><div class="progress_bar"><div class="reviews_progress_fill" data-percentage="<%= Math.round((review_data.total_1_stars / review_data.total_reviews + Number.EPSILON) * 100) / 100 %>"></div></div></div>
+          <div class="div_amount"><div class="review_amount">(<%= review_data.total_1_stars %>)</div></div>
+        </div>
+      </div>
+      <div class="write_review">
+        <span>All feedback</span>
+        <span>is appreciated!</span>
+        <a href="/write-review">
+          Write a review
+          <svg viewBox="0 0 448 512"><path d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-container swiper_reviews_container" id="swiper_reviews_container">
+      <div class="swiper swiper_reviews">
+        <div class="swiper-wrapper"></div>
+      </div>
+      <div class="swiper-button-next swiper_reviews_button_next"></div>
+      <div class="swiper-button-prev swiper_reviews_button_prev"></div>
+      <div class="swiper-pagination swiper_reviews_pagination" id="swiper_reviews_pagination"></div>
+    </div>
+    <div class="page_selector">
+      <button id="page_selector_btn_prev" class="disabled">Prev</button>
+      <div id="page_selector_display" class="page_selector_display">
+        <p class="page">Page 1 of x</p>
+        <p class="items">Showing: 1 - 10</p>
+      </div>
+      <button id="page_selector_btn_next">Next</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <%- include("components/footer") %>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- General info -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Juice - Write A Review</title>
+  <meta name="description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go. Enjoy Fresh Drinks, tasty protein shakes or healthy smoothies, Any time, Anywhere.">
+
+  <!-- Render Blocking Resources -->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/components/custom-select.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/write-review.css">
+  <link rel="stylesheet" href="/css/components/footer.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"></noscript>
+
+  <!-- Deferred Resources -->
+  <script defer src="/script/components/navbar.js"></script>
+  <script defer src="/script/components/custom-select.js"></script>
+  <script defer src="/script/components/currency-select.js"></script>
+  <script defer src="/script/components/mailing-list.js"></script>
+  <script defer src="/script/write-review.js"></script>
+  <link rel="icon" type="image/png" href="/image/logo.webp">
+  
+</head>
+<body>
+<div class="body-container">
+  
+  <header>
+    <%- include("components/navbar") %>
+  </header>
+
+  <main>
+
+    <section class="sec_write_review" id="sec_write_review">
+      <h2 class="review_form_headline">Product Review</h2>
+  
+      <form class="review_form" id="review_form" action="/write-review/submit-review" method="POST" enctype="multipart/form-data">
+        <div class="inp_group inp_group_rating">
+          <label class="rating_label" for="stars_cursor_events_container">Rating:</label>
+          <div class="stars_wrapper">
+            <div class="stars_container review_info_stars" data-rating="10" id="stars_container">
+              <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+            </div> 
+            <div class="stars_cursor_events_container" id="stars_cursor_events_container">
+              <button aria-label="0.5 stars" type="button" data-rating="1"><div data-rating="1" tabindex="-1"></div></button>
+              <button aria-label="1 stars" type="button" data-rating="2"><div data-rating="2" tabindex="-1"></div></button>
+              <button aria-label="1.5 stars" type="button" data-rating="3"><div data-rating="3" tabindex="-1"></div></button>
+              <button aria-label="2 stars" type="button" data-rating="4"><div data-rating="4" tabindex="-1"></div></button>
+              <button aria-label="2.5 stars" type="button" data-rating="5"><div data-rating="5" tabindex="-1"></div></button>
+              <button aria-label="3 stars" type="button" data-rating="6"><div data-rating="6" tabindex="-1"></div></button>
+              <button aria-label="3.5 stars" type="button" data-rating="7"><div data-rating="7" tabindex="-1"></div></button>
+              <button aria-label="4 stars" type="button" data-rating="8"><div data-rating="8" tabindex="-1"></div></button>
+              <button aria-label="4.5 stars" type="button" data-rating="9"><div data-rating="9" tabindex="-1"></div></button>
+              <button aria-label="5 stars" type="button" data-rating="10"><div data-rating="10" tabindex="-1"></div></button>
+            </div>
+          </div>
+          <div class="empty_flex_div"></div>
+        </div>
+        <div class="inp_group">
+          <label for="inp_order_id">Your order ID:</label>
+          <p class="error_text" id="error_order_id"></p>
+          <input type="text" name="order_id" id="inp_order_id" placeholder="15fb812pa58d">
+        </div>
+        <div class="inp_group">
+          <label for="inp_name">Your name or initials: <span>(optional)</span></label>
+          <input type="text" name="name" id="inp_name" placeholder="Shopper">
+        </div>
+        <div class="inp_group">
+          <label for="inp_review">Your review:</label>
+          <p class="error_text" id="error_review"></p>
+          <textarea name="review" id="inp_review" cols="30" rows="10" placeholder="All feedback is appreciated."></textarea>
+        </div>
+        <div class="inp_group inp_group_photo">
+          <label for="inp_img">Add a photo: <span>(optional)</span></label>
+          <p class="error_text" id="error_img"></p>
+          <img class="img_preview" id="img_preview" src="#" alt="Your image">
+          <div class="btn_container">
+            <input type="file" accept="image/*" name="img" id="inp_img">
+            <button type="button" id="btn_remove_img" class="btn_remove_img">Remove photo</button>
+          </div>
+        </div>
+        <button class="btn_submit_review" id="btn_submit_review" type="submit">
+          Submit Review
+          <span class="loading_dots"><span></span><span></span><span></span></span>
+        </button>
+      </form>
+  
+      <div class="review_success_div">
+        <img src="/image/icon/sticker-thank-you.gif" alt="Teddy bear saying thank you">
+        <p>Thank you for your feedback! We are constantly working to improve our customers' experience and will make sure to take your comments into consideration.</p>
+      </div>
+    </section>
+
+    <section class="sec_feedback" id="sec_feedback">
+      <h2>Help us improve</h2>
+      <form action="/submit-feedback" method="POST" class="form_feedback" id="form_feedback">
+        <p class="main_question">How would you rate your experience:</p>
+
+        <div class="question_container">
+          <label for="">Using our website</label>
+          <div class="stars_wrapper">
+            <div class="stars_container" data-not-answered data-rating="5" id="stars_container_1">
+              <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+            </div> 
+            <div class="stars_cursor_events_container" id="stars_cursor_events_container_1">
+              <button aria-label="0.5 stars" type="button" data-rating="1"><div data-rating="1" tabindex="-1"></div></button>
+              <button aria-label="1 stars" type="button" data-rating="2"><div data-rating="2" tabindex="-1"></div></button>
+              <button aria-label="1.5 stars" type="button" data-rating="3"><div data-rating="3" tabindex="-1"></div></button>
+              <button aria-label="2 stars" type="button" data-rating="4"><div data-rating="4" tabindex="-1"></div></button>
+              <button aria-label="2.5 stars" type="button" data-rating="5"><div data-rating="5" tabindex="-1"></div></button>
+              <button aria-label="3 stars" type="button" data-rating="6"><div data-rating="6" tabindex="-1"></div></button>
+              <button aria-label="3.5 stars" type="button" data-rating="7"><div data-rating="7" tabindex="-1"></div></button>
+              <button aria-label="4 stars" type="button" data-rating="8"><div data-rating="8" tabindex="-1"></div></button>
+              <button aria-label="4.5 stars" type="button" data-rating="9"><div data-rating="9" tabindex="-1"></div></button>
+              <button aria-label="5 stars" type="button" data-rating="10"><div data-rating="10" tabindex="-1"></div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="question_container">
+          <label for="">Learning about the product</label>
+          <div class="stars_wrapper">
+            <div class="stars_container" data-not-answered data-rating="5" id="stars_container_2">
+              <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+            </div> 
+            <div class="stars_cursor_events_container" id="stars_cursor_events_container_2">
+              <button aria-label="0.5 stars" type="button" data-rating="1"><div data-rating="1" tabindex="-1"></div></button>
+              <button aria-label="1 stars" type="button" data-rating="2"><div data-rating="2" tabindex="-1"></div></button>
+              <button aria-label="1.5 stars" type="button" data-rating="3"><div data-rating="3" tabindex="-1"></div></button>
+              <button aria-label="2 stars" type="button" data-rating="4"><div data-rating="4" tabindex="-1"></div></button>
+              <button aria-label="2.5 stars" type="button" data-rating="5"><div data-rating="5" tabindex="-1"></div></button>
+              <button aria-label="3 stars" type="button" data-rating="6"><div data-rating="6" tabindex="-1"></div></button>
+              <button aria-label="3.5 stars" type="button" data-rating="7"><div data-rating="7" tabindex="-1"></div></button>
+              <button aria-label="4 stars" type="button" data-rating="8"><div data-rating="8" tabindex="-1"></div></button>
+              <button aria-label="4.5 stars" type="button" data-rating="9"><div data-rating="9" tabindex="-1"></div></button>
+              <button aria-label="5 stars" type="button" data-rating="10"><div data-rating="10" tabindex="-1"></div></button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question_container">
+          <label for="">Placing an order</label>
+          <div class="stars_wrapper">
+            <div class="stars_container" data-not-answered data-rating="5" id="stars_container_3">
+              <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+            </div> 
+            <div class="stars_cursor_events_container" id="stars_cursor_events_container_3">
+              <button aria-label="0.5 stars" type="button" data-rating="1"><div data-rating="1" tabindex="-1"></div></button>
+              <button aria-label="1 stars" type="button" data-rating="2"><div data-rating="2" tabindex="-1"></div></button>
+              <button aria-label="1.5 stars" type="button" data-rating="3"><div data-rating="3" tabindex="-1"></div></button>
+              <button aria-label="2 stars" type="button" data-rating="4"><div data-rating="4" tabindex="-1"></div></button>
+              <button aria-label="2.5 stars" type="button" data-rating="5"><div data-rating="5" tabindex="-1"></div></button>
+              <button aria-label="3 stars" type="button" data-rating="6"><div data-rating="6" tabindex="-1"></div></button>
+              <button aria-label="3.5 stars" type="button" data-rating="7"><div data-rating="7" tabindex="-1"></div></button>
+              <button aria-label="4 stars" type="button" data-rating="8"><div data-rating="8" tabindex="-1"></div></button>
+              <button aria-label="4.5 stars" type="button" data-rating="9"><div data-rating="9" tabindex="-1"></div></button>
+              <button aria-label="5 stars" type="button" data-rating="10"><div data-rating="10" tabindex="-1"></div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="question_container">
+          <label for="">Interacting with our team</label>
+          <div class="stars_wrapper">
+            <div class="stars_container" data-not-answered data-rating="5" id="stars_container_4">
+              <svg class="star_svg star_1" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_2" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_3" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_4" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+              <svg class="star_svg star_5" x="0px" y="0px" width="228.6px" height="218px" viewBox="64 -59 228.6 218"><polygon class="star_svg_left" points="146.7,17.6 64,23.9 127.1,77.7 107.5,158.3 178.2,114.9 178.3,-59"></polygon><polygon class="star_svg_right" points="292.6,24.1 209.9,17.7 178.3,-59 178.2,114.9 248.8,158.4 229.4,77.8"></polygon></svg>
+            </div> 
+            <div class="stars_cursor_events_container" id="stars_cursor_events_container_4">
+              <button aria-label="0.5 stars" type="button" data-rating="1"><div data-rating="1" tabindex="-1"></div></button>
+              <button aria-label="1 stars" type="button" data-rating="2"><div data-rating="2" tabindex="-1"></div></button>
+              <button aria-label="1.5 stars" type="button" data-rating="3"><div data-rating="3" tabindex="-1"></div></button>
+              <button aria-label="2 stars" type="button" data-rating="4"><div data-rating="4" tabindex="-1"></div></button>
+              <button aria-label="2.5 stars" type="button" data-rating="5"><div data-rating="5" tabindex="-1"></div></button>
+              <button aria-label="3 stars" type="button" data-rating="6"><div data-rating="6" tabindex="-1"></div></button>
+              <button aria-label="3.5 stars" type="button" data-rating="7"><div data-rating="7" tabindex="-1"></div></button>
+              <button aria-label="4 stars" type="button" data-rating="8"><div data-rating="8" tabindex="-1"></div></button>
+              <button aria-label="4.5 stars" type="button" data-rating="9"><div data-rating="9" tabindex="-1"></div></button>
+              <button aria-label="5 stars" type="button" data-rating="10"><div data-rating="10" tabindex="-1"></div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="inp_group_where">
+          <label for="inp_where">Where did you find us?</label>
+          <select class="inp_where --semi-rounded-corners" data-custom-select name="where" id="inp_where">
+            <option value="blank">Leave blank</option>
+            <option value="tiktok">TikTok</option>
+            <option value="instagram">Instagram</option>
+            <option value="google">Google Search</option>
+            <option value="recommended">Recommended</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="inp_group">
+          <label for="inp_comment">Add a comment / report an issue.</label>
+          <textarea name="comment" id="inp_comment" cols="30" rows="10" placeholder="All feedback is appreciated."></textarea>
+        </div>
+        <p class="feedback_error_text" id="feedback_error_text"></p>
+        <button type="submit" class="btn_submit_feedback" id="btn_submit_feedback">
+          Submit Feedback
+          <span class="loading_dots"><span></span><span></span><span></span></span>
+        </button>
+      </form>
+
+      <div class="feedback_success_div">
+        <img src="/image/icon/sticker-thank-you.gif" alt="Teddy bear saying thank you">
+        <p>Thank you for your feedback! We are constantly working to improve our customers' experience and will make sure to take your comments into consideration.</p>
+        <a class="btn_return_home" href="/">Return to Homepage</a>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include("components/footer") %>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- General info -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Juice - <%= recipe %>></title>
+  <meta name="description" content="Say hello to a healthier you with your portable blender bottle. Powerful enough to crush ice and small enough to be taken on the go. Enjoy Fresh Drinks, tasty protein shakes or healthy smoothies, Any time, Anywhere.">
+
+  <!-- Render Blocking Resources -->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/components/custom-select.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/recipe.css">
+  <link rel="stylesheet" href="/css/components/footer.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"></noscript>
+
+  <!-- Deferred Resources -->
+  <script defer src="/script/components/navbar.js"></script>
+  <script defer src="/script/components/custom-select.js"></script>
+  <script defer src="/script/components/currency-select.js"></script>
+  <script defer src="/script/components/mailing-list.js"></script>
+  <link rel="icon" type="image/png" href="/image/logo.webp">
+  
+</head>
+<body>
+<div class="body-container">
+  
+  <header id="header">
+    <%- include("components/navbar") %>
+  </header>
+  
+  <main>
+    <section class="section-recipe">
+      <img src="<%= recipe.recipeImageUrl %>" alt="Recipes of <%= recipe.name %>">
+      <div class="recipe__text-container">
+        <h2>Ingredients:</h2>
+        <ul>
+          <% for (let i = 0; i < recipe.recipes.length; i++) { %>
+            <li><%= recipe.recipes[i] %></li>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <%- include("components/footer") %>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.main {
+  margin: 3rem var(--page-margin);
+}
+.main section {
+  max-width: 45rem;
+  margin: 0 auto 1.5rem auto;
+}
+.main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.main h2 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-normal);
+  margin-bottom: 0.5rem;
+}
+.main p {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+.main li {
+  margin-left: 1.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+.main ul {
+  margin-bottom: 0.75rem;
+}

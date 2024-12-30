@@ -1,0 +1,97 @@
+:root {
+  --page-margin: max(1rem, calc(20vw - 100px));
+  --page-max-width: 1500px;
+  --height-infobar: 2rem;
+  --height-navbar: 4rem;
+
+  --clr-primary: rgb(211, 51, 92);
+  --clr-primary-faded: rgb(241, 80, 120);
+  --clr-primary-opaque: rgba(211, 51, 92, 0.2);
+  --clr-white: rgb(241, 235, 228);
+  --clr-black: #212529;
+  --clr-green: rgb(27, 213, 27);
+  --clr-error: rgb(212, 20, 20);
+
+  --text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  --hue-rotate-empty-icon: hue-rotate(330deg);
+  --hue-rotate-success-icon: hue-rotate(12deg);
+
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+@media (prefers-reduced-motion: reduce) { 
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--clr-black);
+}
+.body-container {
+  background-color: var(--clr-white);
+  overflow-x: hidden;
+}
+@supports (overflow-x: clip) {
+  .body-container {
+    overflow-x: clip !important;
+  }
+}
+
+p {
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+}
+
+
+
+/* Prevents Star Loading Issues */
+.star_svg {
+  enable-background: new 64 -59 228.6 218;
+  stroke-width: 0px;
+  width: 1.25em;
+  height: 1.25em;
+  object-fit: cover;
+}
+
+
+
+/* Loading animation */
+.loading_dots > span {
+  --size: 0.5rem;
+  width: var(--size);
+  height: var(--size);
+  display: inline-block;
+  margin: 0 0.1rem;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+  animation: loading_dots 1500ms ease-in-out 0s infinite;
+}
+.loading_dots > span:nth-child(2) {
+  animation-delay: 300ms;
+}
+.loading_dots > span:nth-child(3) {
+  animation-delay: 600ms;
+}
+@keyframes loading_dots {
+  50% {
+    opacity: 0;
+    transform: scale(0.8) translateY(4px);
+  }
+}
