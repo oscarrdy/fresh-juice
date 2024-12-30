@@ -29,12 +29,14 @@ mongoose.connect(process.env.MONGO_URL)
 
 // Configuration
 app.set("view engine", "ejs");
+app.set('trust proxy', true); // NOTE: for heroku forwarded header to work
 app.use(cookieParser());
 app.use(getRawData);
 app.use(express.json());
 app.use('/', express.static(path.join(__dirname, '/public')));
 app.use(fileUpload());
 app.use(express.urlencoded({ extended: false }));
+
 
 // Set up routes
 app.use("/", indexRouter);
