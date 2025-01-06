@@ -41,16 +41,16 @@ router.post("/submit-question", getUser, async (req, res) => {
   }
 
   // Get the data from the request
-  let name = req.body.name;
-  let email = req.body.email;
-  let question = req.body.question;
+  let name = req.body.name?.trim() || "";
+  let email = req.body.email?.trim() || "";
+  let question = req.body.question?.trim() || "";
   let joined_ml = req.body.joined_ml || false;
 
   // Check if the data is valid
   const error_array = [];
-  if (name === "") error_array.push("name required");
-  if (email === "") error_array.push("email required");
-  if (question === "") error_array.push("question required");
+  if (!name) error_array.push("name required");
+  if (!email) error_array.push("email required");
+  if (!question) error_array.push("question required");
   if (error_array.length > 0) {
     return res.json({ 
       error: error_array
